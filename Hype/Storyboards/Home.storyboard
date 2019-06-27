@@ -105,7 +105,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyK-Re-2gn">
                                 <rect key="frame" x="0.0" y="242" width="375" height="376"/>
                                 <connections>
-                                    <segue destination="1L7-9J-Vbq" kind="embed" id="qce-XW-bfK"/>
+                                    <segue destination="zDd-xp-UWv" kind="embed" id="qce-XW-bfK"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7g-Lq-v68">
@@ -518,6 +518,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vAJ-5a-HEN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="POO-HD-bGy"/>
                     <connections>
                         <outlet property="addChallengeButton" destination="mon-0B-kJW" id="Ikf-cZ-ynY"/>
                         <outlet property="weeklyTableView" destination="WAH-Q2-NF1" id="x1M-2Z-eki"/>
@@ -525,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zS-NB-rLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="888"/>
+            <point key="canvasLocation" x="2408.8000000000002" y="887.85607196401804"/>
         </scene>
         <!--Challenges-->
         <scene sceneID="xT5-kY-9cl">
@@ -533,7 +534,25 @@
                 <viewControllerPlaceholder storyboardName="Challenges" id="RpB-dl-Tu6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbb-7s-pQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2085" y="888"/>
+            <point key="canvasLocation" x="3024" y="887.85607196401804"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pfH-5s-uNE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zDd-xp-UWv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="isR-hW-VOO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1L7-9J-Vbq" kind="relationship" relationship="rootViewController" id="n83-IO-9vk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gR-kI-yMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1469.5999999999999" y="887.40629685157433"/>
         </scene>
     </scenes>
 </document>
