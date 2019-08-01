@@ -10,6 +10,10 @@ import UIKit
 
 class DailyChallengeTableViewCell: UITableViewCell {
     
+    let maxCompletions: Float = 4.0
+    var currentCompletion: Float = 0.0
+    
+    
     // MARK: - Outlets
     @IBOutlet weak var challengeLabel: UILabel!
     @IBOutlet weak var challengeCompleteButton: UIButton!
@@ -25,6 +29,16 @@ class DailyChallengeTableViewCell: UITableViewCell {
     
     @IBAction func completeButtonTapped(_ sender: Any) {
         
+        challengeProgressView.setProgress(currentCompletion, animated: false)
+        perform(#selector(updateProgress), with: nil, afterDelay: 0.0)
+        }
+    
+    @objc func updateProgress() {
+        currentCompletion = currentCompletion + 1
+        challengeProgressView.progress = currentCompletion/maxCompletions
+        /* TODO: - if currentCompletion = maxCompletions {
+                pointsLabel.text + 100 }
+        */
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -54,7 +68,7 @@ class DailyChallengeTableViewCell: UITableViewCell {
         progressView.progressTintColor = #colorLiteral(red: 0.186888814, green: 0.6908265948, blue: 0.9980760217, alpha: 1)
         progressView.trackTintColor = #colorLiteral(red: 0.9270117879, green: 0.9414884448, blue: 0.9499133229, alpha: 1)
         
-        progressView.progress = 0.5
+        progressView.progress = 0.0
         progressView.layer.cornerRadius = 10
         progressView.clipsToBounds = true
         progressView.layer.sublayers![1].cornerRadius = 10
